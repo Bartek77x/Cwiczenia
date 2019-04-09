@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <script>
+            function obliczBMI(){
+                var waga=document.bmi.waga.value;
+                var wzrost=document.bmi.wzrost.value;
+                var twojeBMI=waga/(wzrost/100*wzrost/100);
+                if(twojeBMI > 18.5 && twojeBMI < 25){
+                    document.write("OK twoje BMI wynosi: "+ twojeBMI);
+                    } else document.write("Złe BMI! " + twojeBMI);
+                }
+            
+        </script>
+    </head>
+    <body>
+        <h1>Formularz</h1>
+        <form name="bmi">
+            <p>Wzrost w cm: <input name="wzrost"> </p>
+            <p>Waga w kg: <input name="waga"> </p>
+            <input type="button" value="ObliczBMI" onclick="obliczBMI();">
+        </form>
+    </body>
+</html>
